@@ -23,9 +23,13 @@
     <%= form.label :remote %><br>
     <%= form.select :remote, %w[yes maybe no] %>
   </p>
+  <p>
+    <%= form.label :agency %><br>
+    <%= form.check_box :agency %>
+  </p>
 
   <p>
-    <%= form.submit %>
+    <%= form.submit :class => "btn action" %>
   </p>
 
 <% end %>

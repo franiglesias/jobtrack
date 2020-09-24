@@ -1,0 +1,39 @@
+body {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: white;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  color: #2E2F30;
+  font-size: 2rem;
+}
+p, a {
+  font-family: Helvetica, sans-serif;
+  font-weight: normal;
+  color: #2E2F30;
+  font-size: 1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.btn {
+  border-radius: 0.3rem;
+  padding: 0.3rem 0.5rem;
+  display: inline-block;
+}
+
+.action {
+  background-color: cadetblue;
+  color: white;
+}
+
+.warning {
+  background-color: #730E15;
+  color: white;
+}

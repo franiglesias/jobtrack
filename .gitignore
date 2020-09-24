@@ -31,3 +31,5 @@ yarn-debug.log*
 .yarn-integrity
 
 .idea/
+/var/lib/data/*
+!/var/lib/data/.keep

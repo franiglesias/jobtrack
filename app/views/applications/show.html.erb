@@ -2,7 +2,7 @@
 <p><strong>Position:</strong> <%= @application.position %></p>
 <p><strong>Remote:</strong> <%= @application.remote %></p>
 
-<%= link_to 'Update', edit_application_path(@application) %>
+<%= link_to 'Update', edit_application_path(@application), :class => "btn action" %>
 
 <h2>Events</h2>
 
@@ -13,4 +13,4 @@
 <h2>Add an event</h2>
 
 <%= render 'events/form' %>
-<%= link_to 'Back', applications_path %>
+<%= link_to 'Back', applications_path, :class => "btn action" %>
