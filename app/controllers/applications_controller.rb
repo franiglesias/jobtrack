@@ -6,6 +6,7 @@ class ApplicationsController < ApplicationController
   def show
     @application = Application.find(params[:id])
   end
+
   def new
 
   end
@@ -13,8 +14,11 @@ class ApplicationsController < ApplicationController
   def create
     @application = Application.new(application_params)
 
-    @application.save
-    redirect_to @application
+    if @application.save
+      redirect_to @application
+    else
+      render 'new'
+    end
   end
 
   private

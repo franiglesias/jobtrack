@@ -2,6 +2,17 @@
 <%= link_to 'Back', applications_path %>
 
 <%= form_with scope: :application, url: applications_path, local: true do |form| %>
+
+  <% if @application.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@application.errors.count, "error") %> prevented this application from being saved:</h2>
+      <ul>
+        <% @application.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
   <p>
     <%= form.label :company %><br>
     <%= form.text_field :company %>
@@ -18,4 +29,5 @@
   <p>
     <%= form.submit %>
   </p>
+
 <% end %>
