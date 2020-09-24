@@ -3,4 +3,14 @@
 <p><strong>Remote:</strong> <%= @application.remote %></p>
 
 <%= link_to 'Update', edit_application_path(@application) %>
+
+<h2>Events</h2>
+
+<ul>
+  <%= render @application.events %>
+</ul>
+
+<h2>Add an event</h2>
+
+<%= render 'events/form' %>
 <%= link_to 'Back', applications_path %>

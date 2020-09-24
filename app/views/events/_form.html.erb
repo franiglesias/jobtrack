@@ -1,0 +1,18 @@
+<%= form_with(model: [@application, @application.events.build], local: true) do |form| %>
+  <p>
+    <%= form.label :event %>
+    <%= form.text_field :event %>
+  </p>
+  <p>
+    <%= form.label :date %>
+    <%= form.date_field :date %>
+  </p>
+  <p>
+    <%= form.label :notes %>
+    <%= form.text_field :notes %>
+  </p>
+
+  <p>
+    <%= form.submit %>
+  </p>
+<% end %>
