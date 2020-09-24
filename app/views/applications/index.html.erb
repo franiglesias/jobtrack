@@ -1,0 +1,10 @@
+<h1>Current Applications</h1>
+<%= link_to 'Add application', new_application_path %>
+<ul>
+  <% @applications.each do |application| %>
+    <li><span><%= link_to application.position, application_path(application) %></span> @ <span><%= application.company %></span>.
+      <span>Remote: <%= application.remote %></span>
+    </li>
+  <% end %>
+</ul>
+
