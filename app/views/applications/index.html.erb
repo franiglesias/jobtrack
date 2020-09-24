@@ -6,6 +6,7 @@
       <span><%= link_to application.position, application_path(application) %></span> @ <span><%= application.company %></span>.
       <span>Remote: <%= application.remote %></span>
       <%= link_to 'Update', edit_application_path(application) %>
+      <%= link_to 'Destroy', application_path(application), method: :delete, data: {confirm: 'Are you sure?'} %>
     </li>
   <% end %>
 </ul>
