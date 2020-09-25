@@ -1,11 +1,19 @@
 <h1>Current Applications</h1>
 <%= link_to 'Add application', new_application_path, :class => "btn action" %>
 <ul>
+  <li>
+    <span class="position">Position</span>
+    <span class="company">Company</span>
+    <span class="remote">Remote</span>
+    <span class="agency">Agency</span>
+    <span class="actions">Actions</span>
+  </li>
   <% @applications.each do |application| %>
     <li>
       <span class="position"><%= link_to application.position, application_path(application) %></span>
       <span class="company">@ <%= application.company %></span>
-      <span class="remote">Remote: <%= application.remote %></span>
+      <span class="remote"><%= application.remote %></span>
+      <span class="agency"><%= application.agency ? 'Agency' : 'No' %></span>
       <span class="actions">
           <%= link_to 'Update', edit_application_path(application), :class => "btn action" %>
         <%= link_to 'Destroy', application_path(application), :class => "btn action warning", method: :delete, data: {confirm: 'Are you sure?'} %>

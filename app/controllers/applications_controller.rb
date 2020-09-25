@@ -45,6 +45,6 @@ class ApplicationsController < ApplicationController
   private
 
   def application_params
-    params.require(:application).permit(:company, :position, :remote, :agency)
+    params.require(:application).permit(:company, :position, :remote, :agency, :notes)
   end
 end

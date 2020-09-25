@@ -1,7 +1,10 @@
-<p><strong>Company:</strong> <%= @application.company %></p>
-<p><strong>Position:</strong> <%= @application.position %></p>
-<p><strong>Remote:</strong> <%= @application.remote %></p>
+<h1><%= @application.position %> @ <%= @application.company %></h1>
 
+<%= link_to 'Back to Applications', applications_path, :class => "btn action" %>
+
+<p><strong>Agency:</strong> <%= @application.agency %></p>
+<p><strong>Remote:</strong> <%= @application.remote %></p>
+<p><strong>Notes:</strong> <%= @application.notes %></p>
 <%= link_to 'Update', edit_application_path(@application), :class => "btn action" %>
 
 <h2>Events</h2>
@@ -13,4 +16,3 @@
 <h2>Add an event</h2>
 
 <%= render 'events/form' %>
-<%= link_to 'Back', applications_path, :class => "btn action" %>
