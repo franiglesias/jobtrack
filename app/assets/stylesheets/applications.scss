@@ -2,37 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-ul {
-  display: block;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 0.5rem;
-  padding: 0.5rem 1rem 0.5rem 1rem;
-}
 
 li {
-  display: flex;
-  flex-direction: row;
-  align-content: normal;
-  margin: 0.2rem 0 0.2rem 0;
-  padding: 0;
-  font-size: 1rem;
-  font-family: Helvetica, sans-serif;
-
-  &:first-child {
-    span {
-      color: #535656;
-      border-bottom: 1px solid #666666;
-    }
-  }
-
   span {
-    margin: 0.3rem;
-    padding: 0.2rem;
-    display: flex;
-    align-items: center;
-
     &.position {
       flex-basis: 30%;
       flex-grow: 2;

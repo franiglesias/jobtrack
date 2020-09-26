@@ -1,3 +1,19 @@
 // Place all the styles related to the Events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import 'vars.scss';
+
+
+li {
+  span {
+    &.event-data {
+      flex-basis: 20%;
+      flex-grow: 1;
+    }
+
+    &.event-notes {
+      flex-basis: 80%;
+      flex-grow: 4;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <%= form_with(model: [@application, @application.events.build], local: true) do |form| %>
   <p>
     <%= form.label :event %>
-    <%= form.text_field :event %>
+    <%= form.select :event, %w[application referral appointment comment interview communication technical_test offer rejection] %>
   </p>
   <p>
     <%= form.label :date %>
@@ -9,7 +9,7 @@
   </p>
   <p>
     <%= form.label :notes %>
-    <%= form.text_area :notes %>
+    <%= form.text_area :notes, :rows => 10, :cols => 80 %>
   </p>
 
   <p>
